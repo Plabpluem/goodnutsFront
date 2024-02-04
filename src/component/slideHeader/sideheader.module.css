@@ -1,0 +1,86 @@
+.slider {
+  width: 100%;
+  height: 691px;
+}
+
+.slider img{
+    width: 100%;
+  height: 526px;
+  object-fit: cover;
+  object-position: 0% 35%;
+  animation: crossfade 7s ease infinite;
+}
+.logoBrand{
+    background-color: rgba(159, 89, 37, 1);
+    color: var(--thirdColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50%;
+    margin: auto;
+    padding: 0;
+    width: 429px;
+    height: 259px;
+    text-align: center;
+    position: relative;
+    top: -20%;
+
+    z-index: 1;
+}
+
+.logoBrand h1{
+    font-size: 48px;
+    font-weight: 600;
+    margin:  0;
+    padding: 0;
+    position: relative;
+    top: -8%;
+}
+
+.logoBrand p {
+    font-size: 22px;
+    margin:  0;
+    padding: 0;
+    position: relative;
+    top: -8%;
+}
+
+@keyframes crossfade {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width:430px) {
+  .slider{
+    height: 350px;
+  }
+  .slider img{
+      width: 100%;
+    height: 163px;
+    object-fit: cover;
+    object-position: 0% 35%;
+    animation: crossfade 7s ease-in-out infinite;
+  }
+  .logoBrand{
+    width: 267px;
+    height: 161px;
+    top:-10%;
+}
+.logoBrand h1 {
+  font-size: 30px;
+}
+.logoBrand p {
+  font-size: 20px;
+}
+}

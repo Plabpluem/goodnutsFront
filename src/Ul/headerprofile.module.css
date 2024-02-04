@@ -1,0 +1,15 @@
+.headerContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    /* background-color: aqua; */
+}
+.headerContainer a{
+    color: var(--secondColor);
+}
+.headerContainer a:hover,.headerContainer .active{
+    color: var(--orange);
+}

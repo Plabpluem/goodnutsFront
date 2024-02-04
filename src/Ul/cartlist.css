@@ -1,0 +1,191 @@
+.cardCart{
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  width: 364px;
+  min-height: 5rem;
+  max-height: 60rem;
+  background-color: white;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.Cartlist {
+  list-style-type: none;
+  width: 100%;
+  max-height: 20rem;
+  padding: 10px 20px 0px 20px;
+  overflow-y: auto;
+}
+.Cartlist .avaiable{
+  color: var(--secondColor);
+  text-align: center;
+  padding: 0;
+  margin: 10px 0 0 0 !important;
+}
+
+.Cartlist li{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 0 20px 0;
+  border-bottom: 1px solid rgba(161, 161, 161, 1);
+}
+
+.Cartlist .detail {
+  display: flex;
+}
+
+.Cartlist .detail img {
+  width: 59px;
+  height: 53px;
+  object-fit: cover;
+}
+.Cartlist .detail .detailProduct {
+  margin-left: 11px;
+  height: 53px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.detailProduct h5 {
+  font-size: 12px;
+  font-weight: lighter;
+  color: rgba(76, 76, 76, 1);
+}
+
+.detailProduct p {
+  color: rgba(133, 133, 133, 1) ;
+  font-size: 10px;
+  font-weight: lighter;
+}
+
+.Cartlist h1 {
+  color: var(--secondColor);
+}
+
+.pricePlusDe{
+  text-align: right;
+}
+.pricePlusDe h4{
+ font-weight: 600;
+}
+
+.pricePlusDe span {
+  background-color: white;
+  border: 1px solid rgba(133, 133, 133, 1);
+  width: 15px;
+  height: 10px;
+  padding: 0 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.priceProduct {
+  color: var(--orange) ;
+  font-size: 14px;
+}
+
+.spaceAvailable{
+  width: 100%;
+  height: 37px;
+}
+
+.summaryBtnDetail{
+  width: 100%;
+  background-color: var(--fourColor);
+  display: flex;
+  flex-direction: column;
+  margin: 0 !important;
+  padding: 15px 20px !important;
+}
+.summaryDetail{
+  display: flex;
+  justify-content: space-between !important;
+  margin-bottom: 5px !important;
+  width: 100%;
+
+}
+.summaryDetail h3{
+  color: var(--secondColor);
+  /* color: var(--orange) ; */
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.summaryBtnDetail button{
+  width: 100%;
+  background-color: var(--orange);
+  color: var(--fourColor);
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
+.ModalOpen {
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+.ModalExit {
+  animation: fadeOut 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes underline {
+  0% {
+    width: 0%;
+    border-color: transparent; /* Set initial border color to transparent */
+    left: 100%;
+  }
+  100% {
+    left: 0%;
+    width: 100%;
+    border-color: var(--secondColor); /* Set the final border color */
+  }
+}
+
+@keyframes underlineOut {
+  0% {
+    width: 100%;
+    border-color: transparent; /* Set initial border color to transparent */
+  }
+  100% {
+    width: 0%;
+    border-color: var(--secondColor); /* Set the final border color */
+  }
+}
+
+.Cartlist::before {
+  content: "";
+  display: block;
+  height: 0; /* Set height to 0 */
+  border-top: 3px solid var(--secondColor); /* Set the final border color */
+  position: absolute; /* Add position absolute */
+  top: -2px; /* Position the underline at the top */
+  left: 0; /* Add left: 0 */
+  animation: underline 1s forwards;
+}
+

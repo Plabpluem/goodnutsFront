@@ -1,0 +1,36 @@
+.successContainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.295);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.successPayment{
+    padding: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 20%;
+    border-radius: 1rem;
+}
+.successPayment h3{
+    margin: 0;
+    font-size: 40px;
+}
+
+@media screen and (max-width:430px) {
+    .successPayment{
+        width: 50%;
+        height: 20%;
+    }
+    .successPayment h3{
+        font-size: 20px;
+    }
+}

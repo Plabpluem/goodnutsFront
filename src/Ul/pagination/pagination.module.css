@@ -1,0 +1,18 @@
+.paginator{
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.paginator .numberPage,.paginator .icon{
+    margin: 0 0.5rem;
+    padding: 0 0.5rem;
+    cursor: pointer;
+}
+.paginator .numberPage:hover,.paginator .numberPage.active {
+    background-color: var(--orange);
+    color: white;
+    border-radius: 4px;
+}

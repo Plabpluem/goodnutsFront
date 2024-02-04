@@ -1,0 +1,82 @@
+.orderlistContainer {
+    max-width: 900px;
+    width: 100%;
+    margin: auto;
+    padding: 1rem 0;
+    color: var(--secondColor);
+    min-height: 80vh;
+    position: relative;
+}
+.orderlistContainer h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+}
+.listContainer{
+    width: 100%;
+    margin-bottom: 4rem;
+}
+.list{
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 9px;
+    width: 70%;
+    min-width: 360px;
+    margin: 1rem auto;
+    padding: 0.5rem 0;
+    gap: 1rem;
+}
+.list img{
+    width: 80px;
+}
+
+.list section {
+    display: flex;
+    flex-direction: column;
+}
+
+.list section span:first-child{
+    color: var(--orange);
+}
+
+.list .countProduct{
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+    align-items: center;
+    gap: 1rem;
+}
+
+.paginator{
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.paginator .icon{
+    margin: 0 1rem;
+    width: 2rem;
+}
+.paginator .icon:hover{
+    background-color: aqua;
+}
+.paginator .numberPage {
+    margin: 0 0.5rem;
+    padding: 0 0.5rem;
+}
+.paginator span:hover {
+    background-color: red;
+}
+
+@media screen and (max-height:1080px) {
+    .orderlistContainer {
+      min-height: 100vh;
+    }
+  }
+
+  @media screen and (max-width:550px) {
+    .list span {
+        font-size: 14px;
+    }
+  }

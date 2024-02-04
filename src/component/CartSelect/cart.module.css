@@ -1,0 +1,186 @@
+.cartContainer {
+  max-width: 1440px;
+  width: 100%;
+  min-height: 90vh;
+  height: 100%;
+  margin: 0 auto;
+  padding: 2rem 5rem;
+  color: var(--secondColor);
+}
+.cartContainer h3 {
+  color: #303030;
+  font-family: Kanit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+.cartandpayment {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: 2rem;
+}
+.cart {
+  width: 100%;
+  height: 60vh;
+  overflow-y: scroll;
+}
+.cart .detailCartItem {
+  display: flex;
+  max-width: 845px;
+  width: 100%;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #d4d4d4;
+}
+.cart .availiableCart {
+  font-size: 30px;
+  font-weight: 500;
+  max-width: 845px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.cart .detailCartItem img {
+  width: 146px;
+  height: 132px;
+}
+.cart .detailCartItem .detailItem {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #4c4c4c;
+  margin-left: 1rem;
+}
+.cart .detailCartItem .detailItem h4 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+}
+.cart .detailCartItem .detailItem h5 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.detailItem .result {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detailItem .result .btnPlusDe {
+  width: 110px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.detailItem .result .btnPlusDe span {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #b8b8b8;
+  background-color: white;
+  cursor: pointer;
+}
+.detailItem .result .btnPlusDe input {
+  text-align: center;
+  color: var(--secondColor);
+  font-size: 18px;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
+
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.payment {
+  max-width: 393px;
+  width: 100%;
+  height: 321px;
+}
+.resultPayment {
+  border: 1px solid #b8b8b8;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.resultPayment h2 {
+  font-size: 23px;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+.payment button {
+  background-color: var(--orange);
+  font-size: 18px;
+  border-radius: 4px;
+  text-align: center;
+  color: white;
+  border: none;
+  padding: 10px 44px;
+  width: 100%;
+}
+
+.resultPayment h3 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.totalAmount {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+@media screen and (max-width: 970px) {
+  .detailItem .result {
+    width: 100%;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .cartContainer {
+    padding: 2rem 3rem;
+  }
+  .cartandpayment {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .cart .detailCartItem {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 430px) {
+  .cartContainer h3{
+    margin-bottom: 2rem;
+  }
+  .cart{
+    height: 400px;
+  }
+}

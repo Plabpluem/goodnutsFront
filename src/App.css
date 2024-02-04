@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  /* font-family: 'Roboto', sans-serif !important; */
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --primaryColor: #FFE5D1;
+  --secondColor: #50424C;
+  --thirdColor: #FFF8F4;
+  --overlayColor: rgba(184, 125, 83, 0.48)
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--thirdColor);
+  overflow-y: hidden;
+}

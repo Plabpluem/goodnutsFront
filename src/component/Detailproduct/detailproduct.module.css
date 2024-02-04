@@ -1,0 +1,154 @@
+.detailContainer {
+  max-width: 1276px;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-color: rgba(255, 251, 249, 1);
+  margin: auto;
+  padding: 44px 44px;
+  /* display: flex;
+    justify-content: space-between; */
+}
+.detailContainer .placeProduct {
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(75, 36, 0, 0.63);
+  font-family: "Roboto", sans-serif !important;
+  display: flex;
+  list-style-type: none;
+}
+.placeProduct a {
+  color: rgba(75, 36, 0, 0.63);
+}
+.placeProduct a:hover {
+  color: var(--orange) !important;
+}
+.placeProduct li::after {
+  content: "\A0\A0/\A0\A0";
+}
+.placeProduct li:last-child::after {
+  content: "";
+}
+
+.bothColumn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  gap: 2rem;
+}
+
+.detailProduct {
+  max-width: 560px;
+  width: 100%;
+}
+
+.productname {
+  width: 100%;
+  padding: 0;
+  border-bottom: 1px solid var(--secondColor);
+}
+
+.productname h1 {
+  color: var(--secondColor);
+  font-size: 72px;
+  font-weight: 600;
+}
+.productname h3 {
+  font-size: 48px;
+  color: red;
+  font-weight: 600;
+}
+.productname p {
+  color: var(--secondColor);
+  font-size: 20px;
+}
+
+.selectsize,
+.selectflavor {
+  margin: 8px 0 20px 0;
+  /* border: 1px solid black; */
+}
+
+.size,
+.flavor {
+  display: block;
+  justify-content: flex-start;
+  margin: 12px 0 0 33px;
+}
+.selectsize label,
+.selectflavor label {
+  font-size: 20px;
+}
+.size button,
+.flavor button {
+  font-size: 20px;
+  color: var(--secondColor);
+  border: 1px solid var(--secondColor);
+  background-color: rgba(255, 251, 249, 1);
+  margin-right: 26px;
+  border-radius: 8px;
+  padding: 1px 13px;
+  min-width: 60px;
+  cursor: pointer;
+}
+.flavor button {
+  margin-bottom: 10px;
+}
+.size button.active,
+.flavor button.active {
+  background-color: var(--secondColor);
+  color: rgba(255, 251, 249, 1);
+}
+
+.btnCart {
+  background-color: rgba(255, 77, 0, 1);
+  width: 100%;
+  font-size: 20px;
+  color: rgba(255, 251, 249, 1);
+  padding: 8px;
+  border: none;
+  margin-top: 35px;
+}
+.btnCart:active{
+  transform: scale(1.01);
+}
+
+@media screen and (max-width: 820px) {
+  .bothColumn {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .detailProduct {
+    max-width: 530px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 430px) {
+  .detailProduct {
+    max-width: 530px;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  .productname h1 {
+    font-size: 45px;
+    margin: 0;
+    padding: 0;
+    line-height: 3rem;
+  }
+  .productname h3 {
+    font-size: 38px;
+    color: red;
+  }
+  .productname p {
+    color: var(--secondColor);
+    font-size: 16px;
+    font-weight: 100;
+  }
+  .size button,
+  .flavor button {
+    font-size: 18px;
+  }
+}

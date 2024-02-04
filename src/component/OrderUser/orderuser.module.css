@@ -1,0 +1,71 @@
+.orderlistContainer{
+    max-width: 1200px;
+    width: 100%;
+    height: 100vh;
+    margin: 2rem auto 0 auto;
+    color: var(--secondColor);
+    position: relative;
+}
+.orderlistContainer h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+}
+.listContainer table, .listContainer th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: 16px;
+    font-weight: 600;
+}
+.listContainer th{
+    color: white;
+    background-color: var(--brown);
+}
+.listContainer table {
+    width: 100%;
+}
+.listContainer td{
+    min-height: 1rem;
+    padding: 0 1rem;
+    font-weight: 400;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: left;
+    vertical-align: text-top;
+    overflow-wrap: break-word;
+}
+.listContainer td:nth-child(2){
+    width: 50px;
+    text-align: center;
+}
+.listContainer td:nth-child(3),.listContainer td:nth-child(5){
+    width: 150px;
+    text-align: center;
+}
+.listContainer td:nth-child(4){
+    width: 200px;
+    text-align: center;
+}
+.listContainer th:last-child,.listContainer td:nth-child(6) {
+    max-width: 200px;
+    width: 30%;
+    overflow-wrap: break-word;
+}
+.listContainer td span{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width:1080px) {
+    .listContainer{
+        padding: 0 3rem;
+    }
+  }
+@media screen and (max-width:640px) {
+    .orderlistContainer h3 {
+        font-size: 20px;
+    }
+    .listContainer table, .listContainer th {
+        font-size: 10px;
+    }
+  }
