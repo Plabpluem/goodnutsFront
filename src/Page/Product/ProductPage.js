@@ -26,6 +26,7 @@ const ProductPage = () => {
     "Cranberrydried",
   ]);
   const [titleData, setTitleData] = useState("สินค้าทั้งหมด");
+  console.log(process.env.GOODNUTS_API)
   useEffect(() => {
     setNavbarData(status.filterProduct);
     setTitleData(status.filterTitle);
@@ -56,7 +57,8 @@ export default ProductPage;
 
 const loadData = async() => {
   const response = await fetch(
-    "http://13.250.122.193:8080/product/product",
+    // `http://13.250.122.193:8080/product/product`,
+    `${process.env.GOODNUT_API}/product/product`,
     {
       headers: {
         'Content-Type':'application/json'
