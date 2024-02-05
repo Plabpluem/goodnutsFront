@@ -56,7 +56,7 @@ const ImageDetailProduct = (props) => {
             >
               {index === indexPic && (
                 <LazyLoadImage
-                  src={`http://13.250.122.193:8080/${item}`}
+                  src={`${process.env.REACT_APP_GOODNUT_API}/${item}`}
                   alt=""
                   className={`${isAnimating ? classes.animating : ""}`}
                 />
@@ -69,7 +69,7 @@ const ImageDetailProduct = (props) => {
         {props.slides.map((item, index) => {
           return (
             <img
-              src={`http://13.250.122.193:8080/${item}`}
+              src={`${process.env.REACT_APP_GOODNUT_API}/${item}`}
               key={index}
               alt=""
               className={

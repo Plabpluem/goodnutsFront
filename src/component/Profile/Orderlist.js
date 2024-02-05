@@ -48,6 +48,8 @@ const Orderlist = ({ datalist }) => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
 
+  console.log(dataOrder)
+
   return (
     <div className={classes.orderlistContainer}>
       <h3>รายการสั่งซื้อ</h3>
