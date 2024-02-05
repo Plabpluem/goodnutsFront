@@ -3,7 +3,6 @@ import classes from "./cart.module.css";
 import { cartAction } from "../../Store/redux";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import SuccessPayment from "../SuccessPayment/Successpayment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import { getAuthToken } from "../../Util/Auth";
@@ -44,7 +43,7 @@ const Cart = (props) => {
       return;
     }
 
-    fetch("http://13.250.122.193:8080/product/postCart", {
+    fetch(`${process.env.REACT_APP_GOODNUT_API}/product/postCart`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -59,9 +58,6 @@ const Cart = (props) => {
           throw new Error("Failed to send data to the server");
         }
         return response.json();
-      })
-      .then((data) => {
-        console.log(data);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -80,7 +76,7 @@ const Cart = (props) => {
           {cart.items.map((item) => (
             <li key={item.id}>
               <div className={classes.detailCartItem}>
-                <img src={`http://13.250.122.193:8080/${item.image[0]}`} alt="" />
+                <img src={`${process.env.REACT_APP_GOODNUT_API}/${item.image[0]}`} alt="" />
                 <div className={classes.detailItem}>
                   <h4>{item.title}</h4>
                   <h5>

@@ -41,7 +41,7 @@ const Registor = () => {
       isLoading(true)
       try {
         const response = await fetch(
-          "http://13.250.122.193:8080/auth/signup",
+          `${process.env.REACT_APP_GOODNUT_API}/auth/signup`,
           {
             method: "PUT",
             headers: {

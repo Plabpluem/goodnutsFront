@@ -7,7 +7,6 @@ import { getProductId } from '../Util/Auth'
 const HeaderProfile = () => {
     const productId = getProductId()
     const status = useSelector(state => state.status)
-    console.log(status)
   
     return (
         <div className={classes.headerContainer}>

@@ -97,7 +97,7 @@ const AddProduct = () => {
       formData.append("image", image);
     });
     try {
-      const response = await fetch("http://13.250.122.193:8080/product/create", {
+      const response = await fetch(`${process.env.REACT_APP_GOODNUT_API}/product/create`, {
         method: "POST",
         headers: {
           Authorization: "Bearer " + token,

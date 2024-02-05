@@ -6,7 +6,6 @@ import LoadingPage from "../LoadingPage";
 
 const ProfilePage = (props) => {
   const { data } = useLoaderData();
-  console.log(data);
   return (
     <Suspense fallback={<LoadingPage />}>
       <Await resolve={data}>
@@ -35,7 +34,7 @@ export const action = async ({ request, params }) => {
 
   try {
     const response = await fetch(
-      `http://13.250.122.193:8080/product/profile/${productId}`,
+      `${process.env.REACT_APP_GOODNUT_API}/product/profile/${productId}`,
       {
         method: "PUT",
         headers: {
@@ -54,7 +53,7 @@ export const action = async ({ request, params }) => {
 
 const loadData = async () => {
   const token = getAuthToken();
-  const response = await fetch("http://13.250.122.193:8080/auth/user", {
+  const response = await fetch(`${process.env.REACT_APP_GOODNUT_API}/auth/user`, {
     headers: {
       Authorization: "Bearer " + token,
     },

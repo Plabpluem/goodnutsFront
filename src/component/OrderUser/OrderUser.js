@@ -32,22 +32,21 @@ const OrderUser = (props) => {
 
   const onFilterMonth = (e) => {
     const name = e.target.name;
-    if(name === 'day'){
+    if (name === "day") {
       const select = props.data.filter(
         (item) =>
-        new Date(item.createdAt).getDay() === +e.target.value &&
+          new Date(item.createdAt).getDay() === +e.target.value &&
           new Date(item.createdAt).getMonth() + 1 === dataFilter.saveMonth &&
           new Date(item.createdAt).getFullYear() === dataFilter.saveYear
       );
       setOrder(select);
-    }
-    else if (name === "month") {
+    } else if (name === "month") {
       const select = props.data.filter(
         (item) =>
           new Date(item.createdAt).getMonth() + 1 === +e.target.value &&
           new Date(item.createdAt).getFullYear() === dataFilter.saveYear
       );
-      setDataFilter(prev => ({...prev,saveMonth: +e.target.value}))
+      setDataFilter((prev) => ({ ...prev, saveMonth: +e.target.value }));
       setOrder(select);
     } else if (name === "year") {
       const select = props.data.filter(
@@ -90,33 +89,34 @@ const OrderUser = (props) => {
           </select>
         </div>
         <table>
-          <tr>
-            <th>ชื่อสินค้า</th>
-            <th>จำนวน</th>
-            <th>ราคาทั้งหมด</th>
-            <th>ชื่อ- นามสกุล</th>
-            <th>วันที่สั่งสินค้า</th>
-            <th>ที่อยู่</th>
-          </tr>
-          {dataOrder.map((item) => {
-            const date = new Date(item.createdAt);
-            const pricePerEach = item.products.map(
-              (item) => item.totalPrice * +item.quantity
-            );
-            return (
-              <tr className={classes.detailBuyer}>
-                <td>
-                  {item.products.map((product) => {
+          <tbody>
+            <tr>
+              <th>ชื่อสินค้า</th>
+              <th>จำนวน</th>
+              <th>ราคาทั้งหมด</th>
+              <th>ชื่อ- นามสกุล</th>
+              <th>วันที่สั่งสินค้า</th>
+              <th>ที่อยู่</th>
+            </tr>
+            {dataOrder.map((item, index) => {
+              const date = new Date(item.createdAt);
+              const pricePerEach = item.products.map(
+                (item) => item.totalPrice * +item.quantity
+              );
+              return (
+                <tr className={classes.detailBuyer} key={index}>
+                  <td>
+                  {item.products.map((product,index) => {
                     return (
-                      <>
+                      <span key={index}>
                         <span>{product.product.title}</span>
-                      </>
+                      </span>
                     );
                   })}
                 </td>
                 <td>
-                  {item.products.map((product) => {
-                    return <span>{product.quantity}</span>;
+                  {item.products.map((product,index) => {
+                    return <span key={index}>{product.quantity}</span>;
                   })}
                 </td>
                 <td>
@@ -136,9 +136,10 @@ const OrderUser = (props) => {
                   <br></br>
                   {item.user.profile.telephone}
                 </td>
-              </tr>
-            );
-          })}
+                </tr>
+              );
+            })}
+          </tbody>
         </table>
       </div>
       <Pagination

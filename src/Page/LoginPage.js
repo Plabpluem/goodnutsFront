@@ -23,7 +23,7 @@ export const action = async ({ request }) => {
   };
 
   try {
-    const response = await fetch("http://13.250.122.193:8080/auth/login", {
+    const response = await fetch(`${process.env.REACT_APP_GOODNUT_API}/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

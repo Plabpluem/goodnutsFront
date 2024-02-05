@@ -12,7 +12,7 @@ const Reset = () => {
     e.preventDefault();
     try {
       setLoading(true)
-      const response = await fetch("http://13.250.122.193:8080/auth/resetmain", {
+      const response = await fetch(`${process.env.REACT_APP_GOODNUT_API}/auth/resetmain`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

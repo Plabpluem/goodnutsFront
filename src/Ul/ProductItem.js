@@ -9,10 +9,10 @@ const ProductItem = (props) => {
   const dispatch = useDispatch();
   const productContain= useRef(null)
   const inputSize = useRef();
-  const [imageData,setImageData] = useState(`http://13.250.122.193:8080/${props.image[0]}`)
+  const [imageData,setImageData] = useState(`${process.env.REACT_APP_GOODNUT_API}/${props.image[0]}`)
   const [selectedSize, setSelectedSize] = useState(props.itemData[0].size.length>=1?props.itemData[0].size[0]:[]);
   useEffect((e)=>{
-    setImageData(`http://13.250.122.193:8080/${props.image[0]}`)
+    setImageData(`${process.env.REACT_APP_GOODNUT_API}/${props.image[0]}`)
     setSelectedSize(props.itemData[0].size.length>=1?props.itemData[0].size[0]:[])
   },[props.image,props.itemData])
 

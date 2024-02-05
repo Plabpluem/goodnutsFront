@@ -56,7 +56,6 @@ export default ProductPage;
 
 const loadData = async() => {
   const response = await fetch(
-    // `http://13.250.122.193:8080/product/product`,
     `${process.env.REACT_APP_GOODNUT_API}/product/product`,
     {
       headers: {

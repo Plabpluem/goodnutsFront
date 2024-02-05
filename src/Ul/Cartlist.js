@@ -41,7 +41,7 @@ const Cartlist = React.forwardRef((props,ref) => {
           {cart.items.map((item,index) => (
             <li key={item.id}>
               <div className="detail">
-                <img src={`http://13.250.122.193:8080/${item.image[0]}`} alt="" />
+                <img src={`${process.env.REACT_APP_GOODNUT_API}/${item.image[0]}`} alt="" />
                 <div className="detailProduct">
                   <h5>{item.title}</h5>
                   <h5>รส : {item.flavor}</h5>

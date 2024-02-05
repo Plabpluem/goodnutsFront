@@ -19,7 +19,7 @@ const Orderlist = ({ datalist }) => {
   const loadOrder = async () => {
     const token = getAuthToken();
     const response = await fetch(
-      "http://13.250.122.193:8080/product/order?page=" + page,
+      `${process.env.REACT_APP_GOODNUT_API}/product/order?page=` + page,
       {
         headers: {
           Authorization: "Bearer " + token,
@@ -38,15 +38,15 @@ const Orderlist = ({ datalist }) => {
       } else if (name === "next") {
         setPage((prev) => prev + 1);
       }
-      window.scrollTo({top:0,left:0,behavior:"smooth"})
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     },
     [page]
   );
 
   const onChangePage = (newPage) => {
-    setPage(newPage)
-    window.scrollTo({top:0,left:0,behavior:"smooth"})
-  }
+    setPage(newPage);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
 
   return (
     <div className={classes.orderlistContainer}>
@@ -59,9 +59,9 @@ const Orderlist = ({ datalist }) => {
               <div className={classes.list} key={index}>
                 {item.products.map((product, index) => {
                   return (
-                    <div className={classes.countProduct}>
+                    <div className={classes.countProduct} key={index}>
                       <img
-                        src={`http://13.250.122.193:8080/${product.product.image[0]}`}
+                        src={`${process.env.REACT_APP_GOODNUT_API}/${product.product.image[0]}`}
                         alt=""
                       />
                       <section>

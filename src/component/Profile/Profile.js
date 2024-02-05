@@ -26,7 +26,7 @@ const Profile = (props) => {
   }, []);
 
   const loadData = async () => {
-    const response = await fetch("http://13.250.122.193:8080/provinces", {
+    const response = await fetch(`${process.env.REACT_APP_GOODNUT_API}/provinces`, {
       headers: {
         "Content-Type": "application/json",
       },
@@ -42,7 +42,7 @@ const Profile = (props) => {
     );
 
     const responseCity = await fetch(
-      `http://13.250.122.193:8080/provinces/${selectCityId.id}/city`,
+      `${process.env.REACT_APP_GOODNUT_API}/provinces/${selectCityId.id}/city`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -57,7 +57,7 @@ const Profile = (props) => {
         item.name_th === (selectData.city !== "" ? selectData.city : "เขตดุสิต")
     );
     const responseDistrict = await fetch(
-      `http://13.250.122.193:8080/city/${selectDistrictId.id}`,
+      `${process.env.REACT_APP_GOODNUT_API}/city/${selectDistrictId.id}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -89,7 +89,7 @@ const Profile = (props) => {
     const selectedProvince = e.target.value;
     const select = province.find((item) => item.name_th === e.target.value);
     const response = await fetch(
-      `http://13.250.122.193:8080/provinces/${select.id}/city`,
+      `${process.env.REACT_APP_GOODNUT_API}/provinces/${select.id}/city`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -99,7 +99,7 @@ const Profile = (props) => {
     const res = await response.json();
 
     const responseDistrict = await fetch(
-      `http://13.250.122.193:8080/city/${res.data[0].id}`,
+      `${process.env.REACT_APP_GOODNUT_API}/city/${res.data[0].id}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -116,7 +116,7 @@ const Profile = (props) => {
   const onChangeCity = async (e) => {
     const cityValue = e.target.value;
     const select = city.find((item) => item.name_th === e.target.value);
-    const response = await fetch(`http://13.250.122.193:8080/city/${select.id}`, {
+    const response = await fetch(`${process.env.REACT_APP_GOODNUT_API}/city/${select.id}`, {
       headers: {
         "Content-Type": "application/json",
       },

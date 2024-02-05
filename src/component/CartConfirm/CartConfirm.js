@@ -12,7 +12,7 @@ const CartConfirm = (props) => {
 
   const onSubmitCheckout = async () => {
     try {
-      const response = await fetch("http://13.250.122.193:8080/product/checkout", {
+      const response = await fetch(`${process.env.REACT_APP_GOODNUT_API}/product/checkout`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -47,7 +47,7 @@ const CartConfirm = (props) => {
           {cart.items.map((item) => (
             <div key={item.id} className={classes.productlist}>
               <div className={classes.imageDetail}>
-                <img src={`http://13.250.122.193:8080/${item.image[0]}`} alt="" />
+                <img src={`${process.env.REACT_APP_GOODNUT_API}/${item.image[0]}`} alt="" />
                 <div>
                   <h5>{item.title} </h5>
                   <p>รส {item.flavor}</p>
