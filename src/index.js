@@ -74,7 +74,6 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <RootlayOutProfile />,
-        loader: checkAuthToken,
         children: [
           {
             path: ":productId",

@@ -138,6 +138,10 @@ input[type="number"] {
   border: none;
   padding: 10px 44px;
   width: 100%;
+  cursor: pointer;
+}
+.payment button:active {
+  transform: scale(0.98);
 }
 
 .resultPayment h3 {
