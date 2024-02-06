@@ -126,7 +126,7 @@ const OrderUser = (props) => {
                 <td>
                   {date.getHours()}:{date.getMinutes()}:{date.getSeconds()}น.
                   <br></br>
-                  {date.getDay()}/{date.getMonth() + 1}/{date.getFullYear()}{" "}
+                  {date.getDate()}/{date.getMonth() + 1}/{date.getFullYear()}{" "}
                 </td>
                 <td>
                   {item.user.profile.address}

@@ -111,8 +111,14 @@ const router = createBrowserRouter([
       },
       {
         path: "orderuser",
-        element: <OrderUserPage />,
-        loader: OrderallData,
+        element: <RootlayOutProduct />,
+        loader:checkAuthToken,
+        children: [
+          {index:true,
+            element: <OrderUserPage />,
+            loader: OrderallData
+          }
+        ]
       },
       {
         path: "logout",

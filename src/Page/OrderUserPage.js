@@ -1,4 +1,4 @@
-import { Await, defer, useLoaderData } from "react-router-dom";
+import { Await, defer,useLoaderData } from "react-router-dom";
 import OrderUser from "../component/OrderUser/OrderUser";
 import { Suspense } from "react";
 import LoadingPage from "./LoadingPage";
