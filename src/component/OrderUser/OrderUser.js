@@ -35,7 +35,7 @@ const OrderUser = (props) => {
     if (name === "day") {
       const select = props.data.filter(
         (item) =>
-          new Date(item.createdAt).getDay() === +e.target.value &&
+          new Date(item.createdAt).getDate() === +e.target.value &&
           new Date(item.createdAt).getMonth() + 1 === dataFilter.saveMonth &&
           new Date(item.createdAt).getFullYear() === dataFilter.saveYear
       );
