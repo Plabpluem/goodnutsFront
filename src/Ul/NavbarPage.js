@@ -3,13 +3,14 @@ import classes from "./navbarpage.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch } from "react-redux";
+import { statusAction } from "../Store/redux";
 
 const NavbarPage = (props) => {
    const dispatch = useDispatch();
 
   const onSubmitHandler = (e, title, filter) => {
     dispatch(statusAction.changeFilter({ filter: filter, title: title }));
-    props.closeNavbar
+    props.closeNavbar()
   };
   return (
     <>
