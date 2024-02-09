@@ -40,25 +40,31 @@ const NavbarPage = (props) => {
               }}>ALL</Link>
             </li>
             <li>
-              <Link to="/product" onClick={props.closeNavbar}>Mixed Nuts</Link>
+              <Link to="/product" onClick={(e) => {
+              onSubmitHandler(e, "Mixed Nuts", [
+                "Mixednuts",
+                "CaramelMixnut",
+                "CaramelCoffee",
+              ]);
+            }}>Mixed Nuts</Link>
             </li>
             <li>
-              <Link to="/product" onClick={props.closeNavbar}>Macadamia</Link>
+              <Link to="/product" onClick={(e)=>{onSubmitHandler(e,'Macadamia',[ 'Macadamia','CaramelMacadamia'])}}>Macadamia</Link>
             </li>
             <li>
-              <Link to="/product" onClick={props.closeNavbar}>Pistachios</Link>
+              <Link to="/product" onClick={(e)=>{onSubmitHandler(e,'Pistachios',[ "Pistachio"])}}>Pistachios</Link>
             </li>
             <li>
-              <Link to="/product" onClick={props.closeNavbar}>Walnuts</Link>
+              <Link to="/product" onClick={(e)=>{onSubmitHandler(e,'Walnuts',[ "Walnuts",])}}>Walnuts</Link>
             </li>
             <li>
-              <Link to="/product" onClick={props.closeNavbar}>Peacans</Link>
+              <Link to="/product" onClick={(e)=>{onSubmitHandler(e,'Peacans',[ "Peacan",])}}>Peacans</Link>
             </li>
             <li>
-              <Link to="/product" onClick={props.closeNavbar}>Sweet treats</Link>
+              <Link to="/product" onClick={(e)=>{onSubmitHandler(e,'Sweet treats & Cookies',[ 'CaramelMixnut','CaramelMacadamia',"CaramelCoffee","Cookiesingapore","Cerealcookies",])}}>Sweet treats</Link>
             </li>
             <li>
-              <Link to="/product" onClick={props.closeNavbar}>Dried Fruits</Link>
+              <Link to="/product" onClick={(e)=>{onSubmitHandler(e,'Dried Fruits',[ "Apricotdried","Cranberrydried",])}}>Dried Fruits</Link>
             </li>
           </ul>
         </div>
