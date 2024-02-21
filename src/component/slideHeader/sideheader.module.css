@@ -1,6 +1,7 @@
 .slider {
   width: 100%;
   height: 691px;
+  position: relative;
 }
 
 .slider img{
@@ -8,7 +9,8 @@
   height: 526px;
   object-fit: cover;
   object-position: 0% 35%;
-  animation: crossfade 7s ease infinite;
+  position: absolute;
+  /* animation: crossfade 7s ease infinite; */
 }
 .logoBrand{
     background-color: rgba(159, 89, 37, 1);
@@ -24,8 +26,7 @@
     height: 259px;
     text-align: center;
     position: relative;
-    top: -20%;
-
+    top: 57%;
     z-index: 1;
 }
 
@@ -46,7 +47,7 @@
     top: -8%;
 }
 
-@keyframes crossfade {
+/* @keyframes crossfade {
   0% {
     opacity: 0;
   }
@@ -59,7 +60,7 @@
   100% {
     opacity: 0;
   }
-}
+} */
 
 @media screen and (max-width:430px) {
   .slider{
@@ -70,12 +71,11 @@
     height: 163px;
     object-fit: cover;
     object-position: 0% 35%;
-    animation: crossfade 7s ease-in-out infinite;
   }
   .logoBrand{
     width: 267px;
     height: 161px;
-    top:-10%;
+    top:39%;
 }
 .logoBrand h1 {
   font-size: 30px;

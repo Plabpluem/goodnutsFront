@@ -1,8 +1,13 @@
 import classes from "./sideheader.module.css";
+import "./style.css";
 import { useEffect, useState } from "react";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 const SlideHeader = () => {
-  const PicTItle = ['https://img2.pic.in.th/pic/About534d8572d330f719.jpeg', 'https://img5.pic.in.th/file/secure-sv1/About2.jpeg'];
+  const PicTItle = [
+    "https://img2.pic.in.th/pic/About534d8572d330f719.jpeg",
+    "https://img5.pic.in.th/file/secure-sv1/About2.jpeg",
+  ];
   const [indexPic, setIndexPic] = useState(0);
 
   useEffect(() => {
@@ -15,7 +20,11 @@ const SlideHeader = () => {
 
   return (
     <div className={classes.slider}>
-      <img src={PicTItle[indexPic]} alt="" />
+      <TransitionGroup>
+        <CSSTransition key={indexPic} classNames="fade" timeout={1000}>
+          <img src={PicTItle[indexPic]} alt="" />
+        </CSSTransition>
+      </TransitionGroup>
       <div className={classes.logoBrand}>
         <h1>Goodnuts</h1>
         <p>ถั่วอบทรัฟเฟิล คิดสูตรเอง ขายเอง เจ้าแรก</p>
