@@ -81,6 +81,11 @@
   border: 1px solid black;
 }
 
+.slideContainer{
+  display: flex;
+}
+
+
 @media screen and (max-width:1200px) {
   .imagedetailContainer {
   max-width: 530px;

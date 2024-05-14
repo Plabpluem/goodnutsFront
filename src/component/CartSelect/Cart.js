@@ -20,6 +20,7 @@ const Cart = (props) => {
 
   const removeHandler = (id) => {
     dispatch(cartAction.remove(id));
+    // console.log(id)
   };
 
   const deleteItem = (id) => {
@@ -85,7 +86,8 @@ const Cart = (props) => {
                   <h5>จำนวน</h5>
                   <div className={classes.result}>
                     <div className={classes.btnPlusDe}>
-                      <span onClick={removeHandler.bind(null, item.id)}>-</span>
+                      {/* <span onClick={removeHandler.bind(null, item.id)}>-</span> */}
+                      <span onClick={() => removeHandler(item.id)}>-</span>
                       <input type="number" value={item.amount} onChange={(e)=> onChangeAmountHandler(e,item)} />
                       <span onClick={addHandler.bind(null, item)}>+</span>
                     </div>

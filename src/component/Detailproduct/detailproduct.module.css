@@ -110,6 +110,7 @@
   padding: 8px;
   border: none;
   margin-top: 35px;
+  cursor: pointer;
 }
 .btnCart:active{
   transform: scale(1.01);

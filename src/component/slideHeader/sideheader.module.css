@@ -62,6 +62,13 @@
   }
 } */
 
+@media screen and (max-width:700px){
+  .slider img{
+
+    object-position: center;
+  }
+}
+
 @media screen and (max-width:430px) {
   .slider{
     height: 350px;

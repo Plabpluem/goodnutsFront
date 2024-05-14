@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { cartAction } from "../../Store/redux";
 import { useParams, NavLink } from "react-router-dom";
 import useCookie, { setCookie } from "react-use-cookie";
+import Corousal from "./Corousal";
 
 const Detailproduct = (props) => {
   const inputAmount = useRef();
@@ -72,7 +73,8 @@ const Detailproduct = (props) => {
         <li>{param.productId}</li>
       </ul>
       <div className={classes.bothColumn}>
-        <ImageDetailProduct slides={props.image} />
+        <Corousal>{props.image.map((pic,index)=> <img src={`${process.env.REACT_APP_GOODNUT_API}/${pic}`} style={{width: "100%",height:"100%"}} alt=""/> )}</Corousal>
+        {/* <ImageDetailProduct slides={props.image} /> */}
         <div className={classes.detailProduct}>
           <div className={classes.productname}>
             <h1>{props.title}</h1>
@@ -144,7 +146,6 @@ const Detailproduct = (props) => {
           </form>
         </div>
       </div>
-      {/* <h3 className={classes.clickBack} onClick={onTurnBack}>ย้อนกลับ</h3> */}
     </main>
   );
 };

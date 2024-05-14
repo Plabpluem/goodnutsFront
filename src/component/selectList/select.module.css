@@ -19,8 +19,17 @@
     max-width: 716px;
   }
 }
+
+@media screen and (max-width:760px) {
+  .selectContainer {
+    max-width: 356px;
+    grid-template-columns: repeat(1,100%);
+  }
+}
+
 @media screen and (max-width:430px) {
   .selectContainer {
-    max-width: 334px;
+    max-width: 356px;
+    grid-template-columns: repeat(1,100%);
   }
 }

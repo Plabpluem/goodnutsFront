@@ -30,7 +30,9 @@ a{
 }
 
 @media screen and (max-width:1280px) {
-    
+    .listselect {
+        height: 400px;
+    }
 }
 @media screen and (max-width:820px) {
     .listselect {
@@ -42,11 +44,11 @@ a{
     }
 }
 @media screen and (max-width:430px) {
-    .listselect {
+    /* .listselect {
         max-width: 171px;
         height: 98px;
     }
     .listselect h1 {
         font-size: 30px;
-    }
+    } */
 }

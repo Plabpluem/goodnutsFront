@@ -1,5 +1,5 @@
 import classes from "./imagedetailproduct.module.css";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import {
   faChevronLeft,
   faChevronRight,
@@ -25,6 +25,24 @@ const ImageDetailProduct = (props) => {
     setIndexpic(index);
   };
 
+  const slides = useMemo(() => {
+    if (props.slides.length > 1) {
+      let pic = props.slides.map((slide, index) => {
+        <li key={index} className={classes.Slide}>
+          {slide}
+        </li>;
+      });
+      return [
+        <li key={props.slides.length + 1} className={classes.Slide}>
+          {props.slides[props.slides.length - 1]}{" "}
+        </li>,
+        ...pic,
+        <li key={props.slides.length + 2} className={classes.Slide}>
+          {props.slides[0]}
+        </li>,
+      ];
+    }
+  });
   return (
     <div className={classes.imagedetailContainer}>
       <div className={classes.imageSlide}>
@@ -44,6 +62,7 @@ const ImageDetailProduct = (props) => {
             />
           </button>
         </div>
+        <ul>{slides}</ul>
         {props.slides.map((item, index) => {
           return (
             <div
